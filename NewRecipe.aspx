@@ -1,4 +1,4 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="detailsview.aspx.vb" Inherits="detailsview" %>
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="NewRecipe.aspx.vb" Inherits="NewRecepie" %>
 
 <!DOCTYPE html>
 
@@ -10,7 +10,7 @@
     <form id="form1" runat="server">
     <div>
     
-        <asp:SqlDataSource ID="sql_detailsdata" runat="server" ConnectionString="<%$ ConnectionStrings:TGLAVAN_HW6onlythe32ndtry %>" DeleteCommand="DELETE FROM [TGLAVAN_HW6onlythe32ndtry] WHERE [RID] = @RID" InsertCommand="INSERT INTO [TGLAVAN_HW6onlythe32ndtry] ([Recipe_Name], [Submitted_By], [Ingredient_#1], [Ingredient_#2], [Ingredient_#3], [Ingredient_#4], [Ingredient_#5], [Preparation], [Notes]) VALUES (@Recipe_Name, @Submitted_By, @column1, @column2, @column3, @column4, @column5, @Preparation, @Notes)" SelectCommand="SELECT * FROM [TGLAVAN_HW6onlythe32ndtry]" UpdateCommand="UPDATE [TGLAVAN_HW6onlythe32ndtry] SET [Recipe_Name] = @Recipe_Name, [Submitted_By] = @Submitted_By, [Ingredient_#1] = @column1, [Ingredient_#2] = @column2, [Ingredient_#3] = @column3, [Ingredient_#4] = @column4, [Ingredient_#5] = @column5, [Preparation] = @Preparation, [Notes] = @Notes WHERE [RID] = @RID">
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TGLAVAN_HW6onlythe32ndtry %>" DeleteCommand="DELETE FROM [TGLAVAN_HW6onlythe32ndtry] WHERE [RID] = @RID" InsertCommand="INSERT INTO [TGLAVAN_HW6onlythe32ndtry] ([Recipe_Name], [Submitted_By], [Ingredient_#1], [Ingredient_#2], [Ingredient_#3], [Ingredient_#4], [Ingredient_#5], [Preparation], [Notes]) VALUES (@Recipe_Name, @Submitted_By, @column1, @column2, @column3, @column4, @column5, @Preparation, @Notes)" SelectCommand="SELECT * FROM [TGLAVAN_HW6onlythe32ndtry]" UpdateCommand="UPDATE [TGLAVAN_HW6onlythe32ndtry] SET [Recipe_Name] = @Recipe_Name, [Submitted_By] = @Submitted_By, [Ingredient_#1] = @column1, [Ingredient_#2] = @column2, [Ingredient_#3] = @column3, [Ingredient_#4] = @column4, [Ingredient_#5] = @column5, [Preparation] = @Preparation, [Notes] = @Notes WHERE [RID] = @RID">
             <DeleteParameters>
                 <asp:Parameter Name="RID" Type="Int32" />
             </DeleteParameters>
@@ -40,7 +40,7 @@
         </asp:SqlDataSource>
         <br />
         <br />
-        <asp:DetailsView ID="DetailsView1" runat="server" AllowPaging="True" AutoGenerateRows="False" DataKeyNames="RID" DataSourceID="sql_detailsdata" Height="50px" Width="212px">
+        <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="RID" DataSourceID="SqlDataSource1" DefaultMode="Insert" Height="50px" Width="218px">
             <Fields>
                 <asp:BoundField DataField="Recipe_Name" HeaderText="Recipe Name" SortExpression="Recipe_Name" />
                 <asp:BoundField DataField="Submitted_By" HeaderText="Submitted By" SortExpression="Submitted_By" />
@@ -51,6 +51,7 @@
                 <asp:BoundField DataField="Ingredient_#5" HeaderText="Ingredient #5" SortExpression="Ingredient_#5" />
                 <asp:BoundField DataField="Preparation" HeaderText="Preparation" SortExpression="Preparation" />
                 <asp:BoundField DataField="Notes" HeaderText="Notes" SortExpression="Notes" />
+                <asp:CommandField ShowInsertButton="True" />
             </Fields>
         </asp:DetailsView>
     

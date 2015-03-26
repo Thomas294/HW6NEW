@@ -39,11 +39,25 @@
             </UpdateParameters>
         </asp:SqlDataSource>
         <br />
+        Wicked Easy Recipes<br />
+        Using 5 Ingedients or less!
+        <br />
+        <br />
+        <br />
+&nbsp;<asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Default.aspx">Home</asp:HyperLink>
+&nbsp;&nbsp;
+        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/NewRecipe.aspx">New Recipe</asp:HyperLink>
+&nbsp;&nbsp;&nbsp;
+        <asp:HyperLink ID="HyperLink3" runat="server">About Us</asp:HyperLink>
+&nbsp;&nbsp;&nbsp;
+        <asp:HyperLink ID="HyperLink4" runat="server">Contact Us</asp:HyperLink>
+        <br />
+        <br />
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="RID" DataSourceID="sql_hw6data">
             <Columns>
-                <asp:CommandField ShowSelectButton="True" />
                 <asp:BoundField DataField="Recipe_Name" HeaderText="Recipe Name" SortExpression="Recipe_Name" />
                 <asp:BoundField DataField="Submitted_By" HeaderText="Submitted By" SortExpression="Submitted_By" />
+                <asp:HyperLinkField DataNavigateUrlFields="RID" DataNavigateUrlFormatString="Recipe.aspx?RID={0}" Text="Select" />
             </Columns>
         </asp:GridView>
         <br />
