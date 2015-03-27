@@ -17,22 +17,22 @@
             <InsertParameters>
                 <asp:Parameter Name="Recipe_Name" Type="String" />
                 <asp:Parameter Name="Submitted_By" Type="String" />
-                <asp:Parameter Name="column1" Type="String" />
-                <asp:Parameter Name="column2" Type="String" />
-                <asp:Parameter Name="column3" Type="String" />
-                <asp:Parameter Name="column4" Type="String" />
-                <asp:Parameter Name="column5" Type="String" />
+                <asp:Parameter Name="Ingredient_#1" Type="String" />
+                <asp:Parameter Name="Ingredient_#2" Type="String" />
+                <asp:Parameter Name="Ingredient_#3" Type="String" />
+                <asp:Parameter Name="Ingredient_#4" Type="String" />
+                <asp:Parameter Name="Ingredient_#5" Type="String" />
                 <asp:Parameter Name="Preparation" Type="String" />
                 <asp:Parameter Name="Notes" Type="String" />
             </InsertParameters>
             <UpdateParameters>
                 <asp:Parameter Name="Recipe_Name" Type="String" />
                 <asp:Parameter Name="Submitted_By" Type="String" />
-                <asp:Parameter Name="column1" Type="String" />
-                <asp:Parameter Name="column2" Type="String" />
-                <asp:Parameter Name="column3" Type="String" />
-                <asp:Parameter Name="column4" Type="String" />
-                <asp:Parameter Name="column5" Type="String" />
+                <asp:Parameter Name="Ingredient_#1" Type="String" />
+                <asp:Parameter Name="Ingredient_#2" Type="String" />
+                <asp:Parameter Name="Ingredient_#3" Type="String" />
+                <asp:Parameter Name="Ingredient_#4" Type="String" />
+                <asp:Parameter Name="Ingredient_#5" Type="String" />
                 <asp:Parameter Name="Preparation" Type="String" />
                 <asp:Parameter Name="Notes" Type="String" />
                 <asp:Parameter Name="original_RID" Type="Int32" />
